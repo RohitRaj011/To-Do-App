@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9f9f9;
+  /* border-radius: 1em 1em 1em 1em; */
+}
+
+@media only screen and (min-width: 1024px) {
+  .phone {
+    position: relative;
+    width: 420px;
+    margin: 0.5rem 0;
+    /* height: 800px; */
+    max-height: fit-content;
+    background-color: #fff;
+    border-radius: 0 0 1rem 1rem;
+  }
+  header #app-heading {
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+
+header #app-heading {
+  background-image: url("images/99790.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* (img-height / img-width * container-width) */
+}
+
+header .d-flex {
+  position: relative;
+  top: -4rem;
+}
+
+header #app-heading span {
+  color: #fff;
+  margin: 0.5em 0.7em;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+main #app-stats {
+  background-color: #fff;
+}
+
+main #app-stats .card {
+  flex-basis: 0;
+  margin: 0.5em;
+}
+
+#tasks {
+  border: 2px solid #6faf04;
+  color: #6faf04;
+}
+#tasks-done {
+  border: 2px solid #ebba2e;
+  color: #ebba2e;
+}
+#tasks-remaining {
+  border: 2px solid #f00;
+  color: #f00;
+}
+
+main #app-body #tasks-list .task-card {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  background-color: #fff;
+  margin: 0.5em 0.7em;
+  padding: 0.7em;
+}
+
+.task-done {
+  border-left: 5px solid #6faf04;
+}
+.task-added {
+  border-left: 5px solid #ebba2e;
+}
+.task-trash {
+  border-left: 5px solid #f00;
+}
+
+.fa-circle {
+  color: #ebba2e;
+}
+.fa-check-circle {
+  color: #6faf04;
+}
+.fa-plus-circle {
+  color: #115e9b;
+}
+.fa-trash-alt {
+  color: #910000;
+}
+.fa-sync-alt {
+  display: inline;
+  color: #fff;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* COLORS
+  #689E00 - green
+  
+  background-color: #8bc6ec;
+  background-image: linear-gradient(0deg, #8bc6ec 0%, #9599e2 100%);
+  */

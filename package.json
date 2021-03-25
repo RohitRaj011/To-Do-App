@@ -1,0 +1,17 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "To-Do Project in HTML/CSS/JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "author": "Rohit Raj",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.0.0-beta3",
+    "font-awesome": "^4.7.0",
+    "lite-server": "^2.6.1"
+  }
+}

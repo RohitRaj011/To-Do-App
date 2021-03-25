@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap CSS -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <!-- Font Awesome -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+  </head>
+  <body>
+    <div class="phone mx-auto">
+      <!-- ------- HEADER ------- -->
+      <header>
+        <div id="app-heading">
+          <div class="d-flex justify-content-between">
+            <span id="date">Date</span>
+            <i id="clear" class="fas fa-sync-alt fa-2x p-3"></i>
+          </div>
+        </div>
+      </header>
+      <!-- ------- HEADER ------- -->
+      <!-- ------- MAIN -------- -->
+      <main>
+        <div id="app-stats">
+          <div class="cards d-flex text-center">
+            <div class="card flex-grow-1" id="tasks">
+              <i class="fas fa-clipboard-check fa-2x my-2"></i>
+              <span class="counter my-2">10</span>
+              <p>To-Do</p>
+            </div>
+            <div class="card flex-grow-1" id="tasks-done">
+              <i class="fas fa-tasks fa-2x my-2"></i>
+              <span class="counter my-2">10</span>
+              <p>Tasks Done</p>
+            </div>
+            <div class="card flex-grow-1" id="tasks-remaining">
+              <i class="fas fa-list-ul fa-2x my-2"></i>
+              <span class="counter my-2">10</span>
+              <p>Tasks Remaining</p>
+            </div>
+          </div>
+        </div>
+        <div id="app-body">
+          <div id="task-add" class="d-flex pb-2">
+            <input
+              type="text"
+              name="add-task"
+              id="task"
+              placeholder="Add To-Do"
+              class="flex-grow-1 px-2 ms-2"
+            />
+            <i id="add-to-do" class="fas fa-plus-circle fa-2x py-1 mx-2"></i>
+          </div>
+          <ul id="tasks-list" class="no-bullets"></ul>
+        </div>
+      </main>
+      <!-- ------- MAIN ------- -->
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
