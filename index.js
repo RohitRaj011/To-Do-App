@@ -68,7 +68,7 @@ const addToDo = (toDo, id, done, update) => {
             </li>`;
   } else {
     item = `<li id="${id}" class="task-card task-added">
-              <i class="far ${UNCHECK} fa-2x py-1 me-2" onclick="completeToDo(this.parentNode, this)"></i>
+              <i class="far ${UNCHECK} fa-2x py-1 me-2" onclick="completeToDo(this.parentNode, this)" onmouseover="hoverColor(this.parentNode.id, '#e8960f')" onmouseout="hoverColor(this.parentNode.id, '#ebba2e')"></i>
               <span class="flex-grow-1">${toDo}</span>
               <i class="fas fa-trash-alt fa-2x py-1 ms-2" onclick="removeToDo(this.parentNode.id)"></i>
             </li>`;
@@ -90,18 +90,27 @@ const addToDo = (toDo, id, done, update) => {
   localStorage.setItem("TODO", JSON.stringify(todoList));
 };
 
+const hoverColor = (id, color) => {
+  document.getElementById(id).style.borderColor = color;
+};
+
 const completeToDo = (parentNode, node) => {
+  node.removeAttribute("onmouseout", "onmouseover");
+  document.getElementById(parentNode.id).style.borderColor = "#6faf04";
   parentNode.classList.add(TASK_DONE);
   parentNode.classList.remove(TASK_ADDED);
   parentNode.children[1].classList.add(LINE_THROUGH);
   node.classList.add("fas", CHECK);
   node.classList.remove("far", UNCHECK);
 
-  for (let i = 0; i < todoList.length; i++)
-    if (todoList[i].id == parentNode.id) todoList[i].done = true;
+  for (let i = 0; i < todoList.length; i++) {
+    if (todoList[i].id == parentNode.id && todoList[i].done == false) {
+      todoList[i].done = true;
+      tasksDone++;
+    }
+  }
   localStorage.setItem("TODO", JSON.stringify(todoList));
 
-  tasksDone++;
   tasksRemaining = tasksAdded - tasksDone;
   counterChange();
 };

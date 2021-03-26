@@ -89,6 +89,9 @@ main #app-body #tasks-list .task-card {
 .fa-circle {
   color: #ebba2e;
 }
+/* .fa-circle:hover {
+  color: #e8960f;
+} */
 .fa-check-circle {
   color: #6faf04;
 }
@@ -97,6 +100,9 @@ main #app-body #tasks-list .task-card {
 }
 .fa-trash-alt {
   color: #910000;
+}
+.fa-trash-alt:hover {
+  color: #c00000;
 }
 .fa-sync-alt {
   display: inline;
