@@ -6,7 +6,6 @@
 
 body {
   background-color: #f9f9f9;
-  /* border-radius: 1em 1em 1em 1em; */
 }
 
 @media only screen and (min-width: 1024px) {
@@ -14,7 +13,7 @@ body {
     position: relative;
     width: 420px;
     margin: 0.5rem 0;
-    /* height: 800px; */
+    min-height: 800px;
     max-height: fit-content;
     background-color: #fff;
     border-radius: 0 0 1rem 1rem;
@@ -25,7 +24,7 @@ body {
 }
 
 header #app-heading {
-  background-image: url("images/99790.jpg");
+  background-image: url("images/bg.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -89,9 +88,6 @@ main #app-body #tasks-list .task-card {
 .fa-circle {
   color: #ebba2e;
 }
-/* .fa-circle:hover {
-  color: #e8960f;
-} */
 .fa-check-circle {
   color: #6faf04;
 }
@@ -120,4 +116,4 @@ ul.no-bullets {
   
   background-color: #8bc6ec;
   background-image: linear-gradient(0deg, #8bc6ec 0%, #9599e2 100%);
-  */
+*/
